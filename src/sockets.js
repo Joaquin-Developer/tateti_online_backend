@@ -2,44 +2,9 @@ module.exports = function(io) {
     
     io.on('connection', async (socket) => {
         console.log(`Un usuario con id ${socket.id} se unió al chat`);
-        // addUser(socket.id);
-        // // let oldMessages = await Message.find({});
-        // // socket.emit("recover-old-messages", oldMessages);
-    
-        // socket.on("chat-message", async function(message) {
-        //     console.log(`Nuevo Mensaje de ${getUsername(socket.id)}: ${message}`);
-        //     // const msg = new Message({
-        //     //     username: socket.nickname,
-        //     //     message: message
-        //     // });
-        //     // await msg.save();
-
-        //     let msgData = { message: message, userName: getUsername(socket.id) };
-        //     socket.broadcast.emit('send-message', msgData);
-        //     socket.emit('send-message', msgData);
-        // });
-    
-        // socket.on("set-username", function(username, cb) {
-
-        //     if (setUsername(socket.id, username)) {
-        //         cb(true);  // callback
-        //         console.log(`El usuario de id ${socket.id} tiene el nombre de: ${username}`);
-        //         socket.nickname = username;
-        //         // console.log("Nickname: " + socket.nickname);
-        //         setUsername(socket.id, username);
-        //         socket.broadcast.emit('set-username', username);
-        //         socket.emit('set-username', username);
-        //     } else {
-        //         console.log("ya hay un usuario con el username recibido: " + username);
-        //         cb(false);
-        //     }
-        // });
-
-        // socket.on("disconnect", function(data) {
-        //     console.log(`El usuario con id ${socket.id} se desconectó.`);
-        //     deleteUsername(socket.id);
-        // });
-    
+        
+        // seguir...
+        
     });
 } // end module
 
