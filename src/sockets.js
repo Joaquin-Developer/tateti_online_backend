@@ -11,6 +11,29 @@ module.exports = function(io) {
 // LOGIC:
 
 let allUsers = [];  // list of all users
+let games = [];
+
+function addGame(idGame) {
+    games.push(
+        {
+            id: idGame,
+            positions: {
+                "11": null, "12": null, "13": null,
+                "21": null, "00": null, "23": null,
+                "31": null, "32": null, "33": null,
+            }
+        }        
+    );
+}
+
+function saveMove(id, position, valueMove) {
+    for (let game of games) {
+        if (game.id === id) {
+            game.position[position] = valueMove;
+            break;
+        }
+    }
+}
 
 function addUser(id) {
     allUsers.push({
@@ -53,7 +76,7 @@ function deleteUsername(id) {
             allUsers.splice(allUsers.indexOf(user), 1);
         }
     }
-    // volvemos a mostrar usuarios conectados por consola:
+    
     if (allUsers.length === 0) console.log("Hay 0 usuarios conectados.");    
     else allUsers.forEach(user => console.log(user));
     
