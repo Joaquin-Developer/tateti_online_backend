@@ -6,12 +6,12 @@ module.exports = function(io) {
         // seguir...
         
     });
-} // end module
+} // end module.exports
 
 // LOGIC:
 
 let allUsers = [];  // list of all users
-let games = [];
+let games = []; // list of all online games
 
 function addGame(idGame) {
     games.push(
